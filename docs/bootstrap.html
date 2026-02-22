@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap snippets | Pragmatic Snippets</title>
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+
+      <h1 class="mb-5">Bootstrap snippets</h1>
+      <a href="index.html">Go back</a>
+
+      <section>
+        <h2>Accordion</h2>
+        <div class="row">
+          <div class="col-12">
+            <div class="accordion" id="testAccordion">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#firstItem" aria-expanded="true" aria-controls="firstItem">
+                    First Item
+                  </button>
+                </h2>
+                <div id="firstItem" class="accordion-collapse collapse show" data-bs-parent="#testAccordion">
+                  <div class="accordion-body">
+                    This is the first Item.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#secondItem" aria-expanded="true" aria-controls="secondItem">
+                    Second Item
+                  </button>
+                </h2>
+                <div id="secondItem" class="accordion-collapse collapse" data-bs-parent="#testAccordion">
+                  <div class="accordion-body">
+                    This is the second Item.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Alert</h2>
+        <div class="row">
+          <div class="col-12">
+            <div class="alert alert-success">
+              ALERT
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Badges</h2>
+        <div class="row">
+          <div class="col-12">
+            <span class="badge text-bg-info">
+              Badge
+            </span>
+            <span class="badge rounded-pill text-bg-primary">
+              Rounded badge
+            </span>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Buttons</h2>
+        <div class="row">
+          <div class="col-12">
+            <button class="btn btn-success">
+              Normal button
+            </button>
+            <a class="btn btn-warning" role="button" href="#">
+              Anchor button
+            </a>
+            <input class="btn btn-danger" type="submit" value="Submit button"/>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Button group</h2>
+        <div class="row">
+          <div class="col-12">
+            <div class="btn btn-group" role="group" aria-label="Show grouped buttons">
+              <button class="btn btn-danger">
+                Left
+              </button>
+              <button class="btn btn-warning">
+                Middle
+              </button>
+              <button class="btn btn-success">
+                Right
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Cards</h2>
+        <div class="row">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-body">
+                Minimal card
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Dropdowns</h2>
+        <div class="row">
+          <div class="col-12">
+            <div class="dropdown">
+              <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Dropdown
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Link text</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Tables</h2>
+        <div class="row">
+          <div class="col-12">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">Default</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Default Data</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <div class="table-responsive">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Responsive</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Responsive Data</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+
+  </body>
+</html>

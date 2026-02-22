@@ -1,0 +1,13 @@
+{
+    "name": "pragmatic-snippets",
+    "contributes": {
+        "snippets": [
+            {
+                "language": [
+                    "html"
+                ],
+                "path": "./snippets/bootstrap.json"
+            }
+        ]
+    }
+}
