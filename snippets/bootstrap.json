@@ -1,0 +1,173 @@
+{
+    "container": {
+        "prefix": "container",
+        "body": ["<div class=\"container-$1\">", "\t$2", "</div>"],
+        "description": "Bootstrap - defines a div container"
+    },
+    "row": {
+        "prefix": "row",
+        "body": ["<div class=\"row\">", "\t$1", "</div>"],
+        "description": "Bootstrap - defines a div row"
+    },
+    "row-cols": {
+        "prefix": "rowcols",
+        "body": ["<div class=\"row-cols-$1\">", "\t$2", "</div>"],
+        "description": "Bootstrap - defines a div row-cols-<size>"
+    },
+    "columns": {
+        "prefix": "col",
+        "body": ["<div class=\"col-$1\">", "\t$2", "</div>"],
+        "description": "Bootstrap - defines a div col-<size>"
+    },
+    "gutter": {
+        "prefix": "gutter",
+        "body": ["<div class=\"row g-$1\">", "\t$2", "</div>"],
+        "description": "Bootstrap - defines a div row with horizontal/vertical gutters"
+    },
+    "gutter-x": {
+        "prefix": "gutterx",
+        "body": ["<div class=\"row gx-$1\">", "\t$2", "</div>"],
+        "description": "Bootstrap - defines a div row with horizontal gutters"
+    },
+    "gutter-y": {
+        "prefix": "guttery",
+        "body": ["<div class=\"row gy-$1\">", "\t$2", "</div>"],
+        "description": "Bootstrap - defines a div row with vertical gutters"
+    },
+    "accordion": {
+        "prefix": "accordion",
+        "body": [
+            "<div class=\"accordion\" id=\"$1\">",
+            "\t<div class=\"accordion-item\">",
+            "\t\t<h2 class=\"accordion-header\">",
+            "\t\t\t<button class=\"accordion-button\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#$3\" aria-expanded=\"true\" aria-controls=\"$3\">",
+            "\t\t\t\t$2",
+            "\t\t\t</button>",
+            "\t\t</h2>",
+            "\t\t<div id=\"$3\" class=\"accordion-collapse collapse show\" data-bs-parent=\"#$1\">",
+            "\t\t\t<div class=\"accordion-body\">",
+            "\t\t\t\t$4",
+            "\t\t\t</div>",
+            "\t\t</div>",
+            "\t</div>",
+            "</div>"
+        ],
+        "description": "Bootstrap - defines an accordion with a single item"
+    },
+    "accordion-item": {
+        "prefix": "accordionitem",
+        "body": [
+            "<div class=\"accordion-item\">",
+            "\t<h2 class=\"accordion-header\">",
+            "\t\t<button class=\"accordion-button\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#$2\" aria-expanded=\"true\" aria-controls=\"$2\">",
+            "\t\t\t$1",
+            "\t\t</button>",
+            "\t</h2>",
+            "\t<div id=\"$2\" class=\"accordion-collapse collapse\" data-bs-parent=\"#$3\">",
+            "\t\t<div class=\"accordion-body\">",
+            "\t\t\t$4",
+            "\t\t</div>",
+            "\t</div>",
+            "</div>"
+        ],
+        "description": "Bootstrap - defines an accordion item for an existing accordion"
+    },
+    "alert": {
+        "prefix": "alert",
+        "body": ["<div class=\"alert alert-$1\">", "\t$2", "</div>"],
+        "description": "Bootstrap - defines a div alert with specified bootstrap color"
+    },
+    "badge": {
+        "prefix": "badge",
+        "body": ["<span class=\"badge text-bg-$1\">", "\t$2", "</span>"],
+        "description": "Bootstrap - defines a span badge with specified bootstrap color"
+    },
+    "badge-rounded": {
+        "prefix": "badgerounded",
+        "body": ["<span class=\"badge rounded-pill text-bg-$1\">", "\t$2", "</span>"],
+        "description": "Bootstrap - defines a span rounded badge with specified bootstrap color"
+    },
+    "button": {
+        "prefix": "btn",
+        "body": ["<button class=\"btn btn-$1\">", "\t$2", "</button>"],
+        "description": "Bootstrap - defines a button with specified bootstrap color"
+    },
+    "button-anchor": {
+        "prefix": "btnanchor",
+        "body": ["<a class=\"btn btn-$1\" role=\"button\" href=\"$2\">", "\t$3", "</a>"],
+        "description": "Bootstrap - defines an anchor button with specified bootstrap color"
+    },
+    "button-submit": {
+        "prefix": "btnsubmit",
+        "body": ["<input class=\"btn btn-$1\" type=\"submit\" value=\"$2\"/>"],
+        "description": "Bootstrap - defines a submit button with specified bootstrap color"
+    },
+    "button-group": {
+        "prefix": "btngroup",
+        "body": ["<div class=\"btn btn-group\" role=\"group\" aria-label=\"$1\">", "\t$2", "</div>"],
+        "description": "Bootstrap - defines a div btn-group"
+    },
+    "card": {
+        "prefix": "card",
+        "body": [
+            "<div class=\"card\">",
+            "\t<div class=\"card-body\">",
+            "\t\t$2",
+            "\t</div>",
+            "</div>"
+        ],
+        "description": "Bootstrap - defines a minimal div card with only a body"
+    },
+    "dropdown": {
+        "prefix": "dropdown",
+        "body": [
+            "<div class=\"dropdown\">",
+            "\t<button class=\"btn btn-$1 dropdown-toggle\" type=\"button\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\">",
+            "\t\t$2",
+            "\t</button>",
+            "\t<ul class=\"dropdown-menu\">",
+            "\t\t<li><a class=\"dropdown-item\" href=\"$3\">$4</a></li>",
+            "\t</ul>",
+            "</div>"
+        ],
+        "description": "Bootstrap - defines a minimal div card with only a body"
+    },
+    "table": {
+        "prefix": "table",
+        "body": ["<table class=\"table\">", "\t$1", "</table>"],
+        "description": "Bootstrap - defines a minimal table"
+    },
+    "table-responsive": {
+        "prefix": "tableresponsive",
+        "body": [
+            "<div class=\"table-responsive\">",
+            "\t<table class=\"table\">",
+            "\t\t$1",
+            "\t</table>",
+            "</div>"
+        ],
+        "description": "Bootstrap - defines a minimal table"
+    },
+    "table-head": {
+        "prefix": "tablehead",
+        "body": [
+            "<thead>",
+            "\t<tr>",
+            "\t\t<th scope=\"col\">$2</th>",
+            "\t</tr>",
+            "</thead>"
+        ],
+        "description": "Bootstrap - defines a table head"
+    },
+    "table-body": {
+        "prefix": "tablebody",
+        "body": [
+            "<tbody>",
+            "\t<tr>",
+            "\t\t<td>$2</td>",
+            "\t</tr>",
+            "</tbody>"
+        ],
+        "description": "Bootstrap - defines a table body"
+    }
+}
