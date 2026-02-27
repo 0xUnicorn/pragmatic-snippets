@@ -1,0 +1,11 @@
+{
+    "[Manager] get_queryset()": {
+        "prefix": "get_queryset",
+        "body": [
+            "def get_queryset(self) -> QuerySet:",
+            "\t\"\"\"Default queryset for manager $1\"\"\"",
+            "\treturn super().get_queryset().filter($2)"
+        ],
+        "description": "Override a Manager's base QuerySet."
+    }
+}
