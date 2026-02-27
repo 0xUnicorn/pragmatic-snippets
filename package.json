@@ -7,6 +7,12 @@
                     "html"
                 ],
                 "path": "./snippets/bootstrap.json"
+            },
+            {
+                "language": [
+                    "django"
+                ],
+                "path": "./snippets/django/views.json"
             }
         ]
     }
