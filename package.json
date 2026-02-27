@@ -3,27 +3,19 @@
     "contributes": {
         "snippets": [
             {
-                "language": [
-                    "html"
-                ],
+                "language": "html",
                 "path": "./snippets/bootstrap.json"
             },
             {
-                "language": [
-                    "python"
-                ],
+                "language": "python",
                 "path": "./snippets/python.json"
             },
             {
-                "language": [
-                    "django"
-                ],
+                "language": "django",
                 "path": "./snippets/django/models.json"
             },
             {
-                "language": [
-                    "django"
-                ],
+                "language": "django",
                 "path": "./snippets/django/views.json"
             }
         ]
