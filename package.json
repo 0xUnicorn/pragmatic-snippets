@@ -12,6 +12,12 @@
                 "language": [
                     "django"
                 ],
+                "path": "./snippets/django/models.json"
+            },
+            {
+                "language": [
+                    "django"
+                ],
                 "path": "./snippets/django/views.json"
             }
         ]

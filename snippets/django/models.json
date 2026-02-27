@@ -1,0 +1,12 @@
+{
+    "models.BooleanField()": {
+        "prefix": "booleanfield",
+        "body": [
+            "${1:field_name} = models.BooleanField(",
+            "\tdefault=${2:False},",
+            "\thelp_text=\"$3\"",
+            ")"
+        ],
+        "description": "Models.BooleanField"
+    }
+}
