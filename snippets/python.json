@@ -1,0 +1,11 @@
+{
+    "[Class] method": {
+        "prefix": "method",
+        "body": [
+            "def ${1:method_name}(self$2) -> ${3:None}:",
+            "\t\"\"\"${4:Describe functionality of method.}\"\"\"",
+            "\t$5"
+        ],
+        "description": "With docstring and return type"
+    }
+}

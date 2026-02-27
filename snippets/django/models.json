@@ -1,5 +1,5 @@
 {
-    "models.BooleanField()": {
+    "[models] BooleanField": {
         "prefix": "booleanfield",
         "body": [
             "${1:field_name} = models.BooleanField(",
@@ -7,6 +7,15 @@
             "\thelp_text=\"$3\"",
             ")"
         ],
-        "description": "Models.BooleanField"
+        "description": "A true/false field."
+    },
+    "[Manager] get_queryset()": {
+        "prefix": "get_queryset",
+        "body": [
+            "def get_queryset(self) -> QuerySet:",
+            "\t\"\"\"Default queryset for manager $1\"\"\"",
+            "\treturn super().get_queryset().filter($2)"
+        ],
+        "description": "Override a Manager's base QuerySet."
     }
 }

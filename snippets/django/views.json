@@ -1,5 +1,5 @@
 {
-    "get_context_data()": {
+    "[ContextMixin] get_context_data()": {
         "prefix": "get_context_data",
         "body": [
             "def get_context_data(self, **kwargs) -> dict:",
@@ -10,6 +10,6 @@
             "\t})",
             "\treturn context"
         ],
-        "description": "ContextMixin method"
+        "description": "Add data to template context."
     }
 }
