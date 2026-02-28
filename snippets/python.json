@@ -1,11 +1,93 @@
 {
+    "[Class] definition": {
+        "prefix": "class",
+        "body": [
+            "class ${1:ClassName}:",
+            "\t\"\"\"Class for $2.\"\"\"",
+            "\t$3"
+        ],
+        "description": "Class definition."
+    },
     "[Class] method": {
-        "prefix": "method",
+        "prefix": "defmethod",
         "body": [
             "def ${1:method_name}(self$2) -> ${3:None}:",
             "\t\"\"\"${4:Describe functionality of method.}\"\"\"",
             "\t$5"
         ],
-        "description": "With docstring and return type"
+        "description": "Function inside a class."
+    },
+    "[Class] property": {
+        "prefix": "property",
+        "body": [
+            "@property",
+            "def ${1:property_name}(self) -> ${2:None}:",
+            "\t\"\"\"${3:Describe functionality of property.}\"\"\"",
+            "\t$4"
+        ],
+        "description": "Property inside a class."
+    },
+    "[Class] __repr__": {
+        "prefix": "__repr__",
+        "body": [
+            "def __repr__(self) -> str:",
+            "\t\"\"\"${1:Printable representation of an object.}\"\"\"",
+            "\t$4"
+        ],
+        "description": "Printable representation of an object."
+    },
+    "[Class] __str__": {
+        "prefix": "__str__",
+        "body": [
+            "def __str__(self) -> str:",
+            "\t\"\"\"${1:String presentation of the class.}\"\"\"",
+            "\treturn $2"
+        ],
+        "description": "String presentation of a class."
+    },
+    "[Loops] for-loop": {
+        "prefix": "forloop",
+        "body": [
+            "for $1 in $2:",
+            "\t$3"
+        ],
+        "description": "For loops iterate over a given sequence."
+    },
+    "[Loops] for-loop-else": {
+        "prefix": "forloopelse",
+        "body": [
+            "for $1 in $2:",
+            "\t$3",
+            "else:",
+            "\t$4"
+        ],
+        "description": "When the loop condition fails the part in `else` is executed."
+    },
+    "[Loops] while-loop": {
+        "prefix": "whileloop",
+        "body": [
+            "while $1:",
+            "\t$2"
+        ],
+        "description": "While loops repeat as long as a certain boolean condition is met."
+    },
+    "[Loops] while-loop-else": {
+        "prefix": "whileloopelse",
+        "body": [
+            "while $1:",
+            "\t$2",
+            "else:",
+            "\t$3"
+        ],
+        "description": "When the loop condition fails the part in `else` is executed."
+    },
+    "Function": {
+        "prefix": "def",
+        "body": [
+            "def ${1:function_name}($2) -> ${3:None}:",
+            "\t\"\"\"${4:Describe logic of this function.}\"\"\"",
+            "\t$5"
+        ],
+        "description": "Function outside a class."
     }
 }
