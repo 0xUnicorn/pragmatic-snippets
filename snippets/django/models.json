@@ -4,9 +4,140 @@
         "body": [
             "${1:field_name} = models.BooleanField(",
             "\tdefault=${2:False},",
-            "\thelp_text=\"$3\"",
+            "\thelp_text=\"$3\",",
             ")"
         ],
         "description": "A true/false field."
+    },
+    "[models] CharField": {
+        "prefix": "charfield",
+        "body": [
+            "${1:field_name} = models.CharField(",
+            "\tmax_length=\"${2:254}\",",
+            "\thelp_text=\"$3\",",
+            ")"
+        ],
+        "description": "A string field, for small- to large-sized strings."
+    },
+    "[models] DateField": {
+        "prefix": "datefield",
+        "body": [
+            "${1:field_name} = models.DateField(",
+            "\tauto_now$2=${3:True},",
+            "\thelp_text=\"Date for $4\",",
+            ")"
+        ],
+        "description": "A date."
+    },
+    "[models] DateTimeField": {
+        "prefix": "datetimefield",
+        "body": [
+            "${1:field_name} = models.DateTimeField(",
+            "\tauto_now$2=${3:True},",
+            "\thelp_text=\"Timestamp for $4\",",
+            ")"
+        ],
+        "description": "A date and time."
+    },
+    "[models] DecimalField": {
+        "prefix": "decimalfield",
+        "body": [
+            "${1:field_name} = models.DecimalField(",
+            "\thelp_text=\"$2\",",
+            ")"
+        ],
+        "description": "A fixed-precision decimal number."
+    },
+    "[models] EmailField": {
+        "prefix": "emailfield",
+        "body": [
+            "${1:field_name} = models.EmailField(",
+            "\tmax_length=\"${2:254}\",",
+            "\thelp_text=\"$3\",",
+            ")"
+        ],
+        "description": "A CharField that checks that the value is a valid email address using EmailValidator."
+    },
+    "[models] FloatField": {
+        "prefix": "floatfield",
+        "body": [
+            "${1:field_name} = models.FloatField(",
+            "\thelp_text=\"$2\",",
+            ")"
+        ],
+        "description": "A floating-point number."
+    },
+    "[models] ForeignKey": {
+        "prefix": "foreignkey",
+        "body": [
+            "${1:field_name} = models.ForeignKey(",
+            "\t${2:ModelName},",
+            "\ton_delete=models.${3:CASCADE},",
+            "\trelated_name=\"$1$4\",",
+            "\thelp_text=\"$5\",",
+            ")"
+        ],
+        "description": "A many-to-one relationship."
+    },
+    "[models] IntegerField": {
+        "prefix": "integerfield",
+        "body": [
+            "${1:field_name} = models.IntegerField(",
+            "\thelp_text=\"$2\",",
+            ")"
+        ],
+        "description": "An integer."
+    },
+    "[models] OneToOneField": {
+        "prefix": "onetoonefield",
+        "body": [
+            "${1:field_name} = models.OneToOneField(",
+            "\t${2:ModelName},",
+            "\ton_delete=models.${3:CASCADE},",
+            "\trelated_name=\"$1$4\",",
+            "\thelp_text=\"$5\",",
+            ")"
+        ],
+        "description": "A one-to-one relationship."
+    },
+    "[models] SlugField": {
+        "prefix": "slugfield",
+        "body": [
+            "${1:slug} = models.SlugField(",
+            "\tmax_length=\"${2:50}\",",
+            "\thelp_text=\"The slug for $3\",",
+            ")"
+        ],
+        "description": "Like a CharField."
+    },
+    "[models] TextField": {
+        "prefix": "textfield",
+        "body": [
+            "${1:field_name} = models.TextField(",
+            "\thelp_text=\"$2\",",
+            ")"
+        ],
+        "description": "A large text field."
+    },
+    "[models] URLField": {
+        "prefix": "urlfield",
+        "body": [
+            "${1:field_name} = models.URLField(",
+            "\thelp_text=\"$3\",",
+            ")"
+        ],
+        "description": "A CharField for a URL, validated by URLValidator."
+    },
+    "[models] UUIDField": {
+        "prefix": "uuidfield",
+        "body": [
+            "${1:uuid} = models.UUIDField(",
+            "\tprimary_key=${2:True},",
+            "\tdefault=${3:uuid.uuid4},",
+            "\teditable=${4:False},",
+            "\thelp_text=\"${5:The unique ID (UUID4)}\",",
+            ")"
+        ],
+        "description": "A field for storing universally unique identifiers."
     }
 }
