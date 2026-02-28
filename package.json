@@ -20,6 +20,10 @@
             },
             {
                 "language": "django",
+                "path": "./snippets/django/urls.json"
+            },
+            {
+                "language": "django",
                 "path": "./snippets/django/views.json"
             }
         ]

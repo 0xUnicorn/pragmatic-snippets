@@ -1,0 +1,26 @@
+{
+    "[django.urls] urlpatterns = []": {
+        "prefix": "urlpatterns",
+        "body": [
+            "urlpatterns = [",
+            "\t$1",
+            "]"
+        ],
+        "description": "urlpatterns should be a sequence of path() and/or re_path() instances."
+    },
+    "[django.urls] path() for function views": {
+        "prefix": "path",
+        "body": "path(\"${1:route/}\", ${2:view}, name=\"${3:path_name}\"),",
+        "description": "urlpatterns should be a sequence of path() and/or re_path() instances."
+    },
+    "[django.urls] path() with ClassBasedView": {
+        "prefix": "pathclass",
+        "body": "path(\"${1:route/}\", ${2:ViewClass}${3:.as_view()}, name=\"${4:path_name}\"),",
+        "description": "urlpatterns should be a sequence of path() and/or re_path() instances."
+    },
+    "[django.urls] path() with include()": {
+        "prefix": "pathinclude",
+        "body": "path(\"${1:route/}\", include(${2:ViewClass}), name=\"${3:path_name}\"),",
+        "description": "urlpatterns should be a sequence of path() and/or re_path() instances."
+    }
+}
