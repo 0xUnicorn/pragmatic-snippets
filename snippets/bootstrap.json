@@ -99,7 +99,7 @@
     },
     "button-submit": {
         "prefix": "btnsubmit",
-        "body": ["<input class=\"btn btn-$1\" type=\"submit\" value=\"$2\"/>"],
+        "body": ["<button class=\"btn btn-$1\" type=\"submit\">$2</button>"],
         "description": "Bootstrap - defines a submit button with specified bootstrap color"
     },
     "button-group": {
