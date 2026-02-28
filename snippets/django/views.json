@@ -12,6 +12,24 @@
         ],
         "description": "Add data to template context."
     },
+    "[View] get()": {
+        "prefix": "getrequest",
+        "body": [
+            "def get(self, request, *args, **kwargs):",
+            "\t\"\"\"Handle GET request for $1.\"\"\"",
+            "\t$2"
+        ],
+        "description": "Handle GET requests."
+    },
+    "[View] post()": {
+        "prefix": "postrequest",
+        "body": [
+            "def post(self, request, *args, **kwargs):",
+            "\t\"\"\"Handle POST request for $1.\"\"\"",
+            "\t$2"
+        ],
+        "description": "Handle POST requests."
+    },
     "[views.generic] CreateView": {
         "prefix": "createview",
         "body": [
