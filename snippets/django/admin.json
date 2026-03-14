@@ -1,0 +1,20 @@
+{
+    "[Admin] ModelAdmin": {
+        "prefix": "modeladmin",
+        "body": [
+            "class $1ModelAdmin(admin.ModelAdmin):",
+            "\t\"\"\"ModelAdmin for $2.\"\"\"",
+            "\t$3"
+        ],
+        "description": "ModelAdmin definition."
+    },
+    "[Admin] get_queryset()": {
+        "prefix": "get_queryset_admin",
+        "body": [
+            "def get_queryset(self, request) -> QuerySet:",
+            "\t\"\"\"Default queryset for ModelAdmin $1\"\"\"",
+            "\treturn super().get_queryset(request).filter($2)"
+        ],
+        "description": "Override a ModelAdmin's base QuerySet."
+    }
+}

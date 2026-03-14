@@ -12,6 +12,28 @@
         ],
         "description": "Add data to template context."
     },
+    "[FormMixin] get_initial()": {
+        "prefix": "get_initial",
+        "body": [
+            "def get_initial(self) -> dict:",
+            "\t\"\"\"Update initial form data with $1.\"\"\"",
+            "\tinitial = super().get_initial()",
+            "\tinitial.update({",
+            "\t\t\"$2\": $3",
+            "\t})",
+            "\treturn initial"
+        ],
+        "description": "Update initial data for a form."
+    },
+    "[View] delete()": {
+        "prefix": "deleterequest",
+        "body": [
+            "def delete(self, request, *args, **kwargs):",
+            "\t\"\"\"Handle DELETE request for $1.\"\"\"",
+            "\t$2"
+        ],
+        "description": "Handle DELETE requests."
+    },
     "[View] get()": {
         "prefix": "getrequest",
         "body": [
@@ -29,6 +51,15 @@
             "\t$2"
         ],
         "description": "Handle POST requests."
+    },
+    "[View] get_success_url(self)": {
+        "prefix": "get_success_url",
+        "body": [
+            "def get_success_url(self): -> str",
+            "\t\"\"\"Get success URL for $1.\"\"\"",
+            "\treturn reverse($2)"
+        ],
+        "description": "URL to redirect to when the form is successfully validated"
     },
     "[views.generic] CreateView": {
         "prefix": "createview",
@@ -106,7 +137,7 @@
             "\t\"\"\"UpdateView for $1$2.\"\"\"",
             "\tmodel = ${1:ModelName}",
             "\tfields = [\"$3\"$4]",
-            "\ttemplate = \"${5:template_name}.html\""
+            "\ttemplate_name = \"${5:template_name}.html\""
         ],
         "description": "View for updating an object, with a response rendered by a template."
     },

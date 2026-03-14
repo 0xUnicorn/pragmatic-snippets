@@ -1,6 +1,6 @@
 {
     "[Manager] get_queryset()": {
-        "prefix": "get_queryset",
+        "prefix": "get_querysetmanager",
         "body": [
             "def get_queryset(self) -> QuerySet:",
             "\t\"\"\"Default queryset for manager $1\"\"\"",

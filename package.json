@@ -12,6 +12,10 @@
             },
             {
                 "language": "django",
+                "path": "./snippets/django/admin.json"
+            },
+            {
+                "language": "django",
                 "path": "./snippets/django/manager.json"
             },
             {
