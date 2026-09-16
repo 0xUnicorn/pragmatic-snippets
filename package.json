@@ -3,10 +3,32 @@
     "contributes": {
         "snippets": [
             {
-                "language": [
-                    "html"
-                ],
+                "language": "html",
                 "path": "./snippets/bootstrap.json"
+            },
+            {
+                "language": "python",
+                "path": "./snippets/python.json"
+            },
+            {
+                "language": "django",
+                "path": "./snippets/django/admin.json"
+            },
+            {
+                "language": "django",
+                "path": "./snippets/django/manager.json"
+            },
+            {
+                "language": "django",
+                "path": "./snippets/django/models.json"
+            },
+            {
+                "language": "django",
+                "path": "./snippets/django/urls.json"
+            },
+            {
+                "language": "django",
+                "path": "./snippets/django/views.json"
             }
         ]
     }
