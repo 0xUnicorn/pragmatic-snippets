@@ -88,6 +88,15 @@
             "\t\"\"\"${4:Describe logic of this function.}\"\"\"",
             "\t$5"
         ],
-        "description": "Function outside a class."
+        "description": "User defined function."
+    },
+    "Test function": {
+        "prefix": "deftest",
+        "body": [
+            "def test_${1:function_name}($2) -> ${3:None}:",
+            "\t\"\"\"Test ${4:Describe what it's testing.}\"\"\"",
+            "\t$5"
+        ],
+        "description": "Test function."
     }
 }
