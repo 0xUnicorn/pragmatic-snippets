@@ -8,6 +8,15 @@
         ],
         "description": "Class definition."
     },
+    "[Class] test definition": {
+        "prefix": "classtest",
+        "body": [
+            "class ${1:ClassName}:",
+            "\t\"\"\"Grouping tests for $2.\"\"\"",
+            "\t$3"
+        ],
+        "description": "TestClass definition."
+    },
     "[Class] method": {
         "prefix": "defmethod",
         "body": [
@@ -16,6 +25,15 @@
             "\t$5"
         ],
         "description": "Function inside a class."
+    },
+    "[Class] pytest method": {
+        "prefix": "defmethodtest",
+        "body": [
+            "def test_${1:function_name}(self$2) -> None:",
+            "\t\"\"\"Test ${3:Describe what it's testing.}\"\"\"",
+            "\t$4"
+        ],
+        "description": "Test function."
     },
     "[Class] property": {
         "prefix": "property",
@@ -81,7 +99,7 @@
         ],
         "description": "When the loop condition fails the part in `else` is executed."
     },
-    "Function": {
+    "[Function] definition": {
         "prefix": "def",
         "body": [
             "def ${1:function_name}($2) -> ${3:None}:",
@@ -90,13 +108,23 @@
         ],
         "description": "User defined function."
     },
-    "Test function": {
+    "[Function] pytest definition": {
         "prefix": "deftest",
         "body": [
-            "def test_${1:function_name}($2) -> ${3:None}:",
+            "def test_${1:function_name}($2) -> None:",
+            "\t\"\"\"Test ${3:Describe what it's testing.}\"\"\"",
+            "\t$4"
+        ],
+        "description": "Test function."
+    },
+    "[Fixture] pytest definition": {
+        "prefix": "@fixture",
+        "body": [
+            "@pytest.fixture",
+            "def ${1:fixture_name}($2) -> ${3:None}:",
             "\t\"\"\"Test ${4:Describe what it's testing.}\"\"\"",
             "\t$5"
         ],
-        "description": "Test function."
+        "description": "Fixture function."
     }
 }
