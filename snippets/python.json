@@ -11,7 +11,7 @@
     "[Class] test definition": {
         "prefix": "classtest",
         "body": [
-            "class ${1:ClassName}:",
+            "class Test${1:ClassName}:",
             "\t\"\"\"Grouping tests for $2.\"\"\"",
             "\t$3"
         ],
