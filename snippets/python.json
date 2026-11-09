@@ -4,7 +4,7 @@
         "body": [
             "class ${1:ClassName}:",
             "\t\"\"\"Class for $2.\"\"\"",
-            "\t$3"
+            "\n\t$3"
         ],
         "description": "Class definition."
     },
@@ -13,7 +13,7 @@
         "body": [
             "class Test${1:ClassName}:",
             "\t\"\"\"Grouping tests for $2.\"\"\"",
-            "\t$3"
+            "\n\t$3"
         ],
         "description": "TestClass definition."
     },
