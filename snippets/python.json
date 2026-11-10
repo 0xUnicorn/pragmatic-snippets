@@ -122,7 +122,7 @@
         "body": [
             "@pytest.fixture",
             "def ${1:fixture_name}($2) -> ${3:None}:",
-            "\t\"\"\"Test ${4:Describe what it's testing.}\"\"\"",
+            "\t\"\"\"Fixture returning $4.\"\"\"",
             "\t$5"
         ],
         "description": "Fixture function."
